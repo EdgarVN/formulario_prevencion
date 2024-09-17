@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const fechaHoraActual = new Date();
       const fechaHoraFormato = `${fechaHoraActual.getFullYear()}${(fechaHoraActual.getMonth() + 1).toString().padStart(2, '0')}${fechaHoraActual.getDate().toString().padStart(2, '0')}${fechaHoraActual.getHours().toString().padStart(2, '0')}${fechaHoraActual.getMinutes().toString().padStart(2, '0')}${fechaHoraActual.getSeconds().toString().padStart(2, '0')}`;
       const variableAutomatica = lugar + fechaHoraFormato;
-    } }else {
+    } else {
       alert('Usuario o contraseña incorrecto');  // Mostrar un mensaje de error
     }
   });
