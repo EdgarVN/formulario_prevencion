@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Función para subir el PDF al repositorio de GitHub
   async function uploadPDFToGitHub(doc) {
-    const token = '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';  // Reemplazar por tu token personal de GitHub
+    const token = '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';  // Reemplazar por tu token personal de GitHub
     const repo = 'formulario_prevencion';
     const owner = 'EdgarVN';
     const path = 'Acta/acta_reunion.pdf';
