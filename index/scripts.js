@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
       (email === 'veronica.centelles@sacmigroup.com' && password === '1234')) {
       loginForm.classList.add('hidden');  // Esconder el formulario de inicio de sesión
       formContainer.classList.remove('hidden');  // Mostrar el formulario principal
+       // Solicitar el valor de la constante lugar
+      const lugar = prompt("Por favor, ingrese el valor para 'lugar':");
+      const fechaHoraActual = new Date();
+      const fechaHoraFormato = `${fechaHoraActual.getFullYear()}${(fechaHoraActual.getMonth() + 1).toString().padStart(2, '0')}${fechaHoraActual.getDate().toString().padStart(2, '0')}${fechaHoraActual.getHours().toString().padStart(2, '0')}${fechaHoraActual.getMinutes().toString().padStart(2, '0')}${fechaHoraActual.getSeconds().toString().padStart(2, '0')}`;
+      const variableAutomatica = lugar + fechaHoraFormato;
     } else {
       alert('Usuario o contraseña incorrecto');  // Mostrar un mensaje de error
     }
@@ -180,10 +185,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Función para subir el PDF al repositorio de GitHub
   async function uploadPDFToGitHub(doc) {
-    const token = 'TU_TOKEN_GITHUB';  // Reemplazar por tu token personal de GitHub
-    const repo = 'NOMBRE_DEL_REPOSITORIO';
-    const owner = 'TU_USUARIO_DE_GITHUB';
-    const path = 'ruta/en/repositorio/acta_reunion.pdf';
+    const token = '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';  // Reemplazar por tu token personal de GitHub
+    const repo = 'formulario_prevencion';
+    const owner = 'EdgarVN';
+    const path = 'Acta/acta_reunion.pdf';
 
     // Convertir el PDF a base64
     const pdfContent = doc.output('datauristring');
